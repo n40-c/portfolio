@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monet - Design and Front End Implementation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="case-study">
+    <script src="script.js" defer></script>
+    <div class="bkgd-container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="about.html">Contact + About</a></li>
+                    <li><a href="https://github.com/n40-c/portfolio/blob/main/2023Dec%20Resume.pdf">Resume</a></li>
+                </ul>
+            </nav>
+
+            <a href="index.html">&#60; All Projects</a>
+
+            <div>
+                <h1>Monet 1-Page Site <span class="subtitle">Design and front-end implementation (HTML/CSS/JS)</span></h1>
+            </div>
+
+            <div>
+                <dl>
+                    <dt>Timeframe</dt>
+                    <dd>June 2023, 1 week</dd>
+                    <dt>Team</dt>
+                    <dd>Solo</dd>
+                </dl>
+                <dl>
+                    <div>
+                        <dt>Fields</dt>
+                        <dd>UI, Front&dash;end (HTML/CSS/JS)</dd>
+                    </div>
+                    <div>
+                        <dt>Tools</dt>
+                        <dd>Figma, Visual Studio Code, Brackets, W3 HTML and CSS validator</dd>
+                    </div>
+                </dl>
+            </div>
+            
+            <img src="images/monet/monet-cover.png"><!--INSERT CORRECT IMAGE-->
+        </header>
+    </div>
+
+    <main>
+        <div class="bkgd-container gray">
+            <section>
+                <h2>Project Goal</h2>
+                <div class="layout-2col">
+                    <div>
+                        <p><strong class="spotlight">Create a 1-page site with 3 required features</strong> ...with "creation" entailing both the design and the front-end implementation.</p>
+                    </div>
+                    <div>
+                        <p><b>Content focus:</b> I decided to create a webpage for the painter Claude Monet. This webpage would display a selection of his paintings, briefly introduce the painter, and sell Monet memorabilia.</p>
+                        <p><b>Required features:</b> Light/dark mode; form validation; product display and shopping cart with cost calculation.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div class="bkgd-container pink">
+            <section>
+                <h2>Design Goals</h2>
+                <div class="spotlight halfwidth-layout">
+                    <p>Create a design that has a unifying visual theme, is&nbsp;usable, and is&nbsp;aesthetic.</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="bkgd-container">
+            <section>
+                <h2>Design Concept</h2>
+
+                <div class="layout-2col">
+                    <div>
+                        <p>Elegant and sleek, like a museum listing, with tamer colors that won't distract from Monet's vibrant artworks.</p>
+                        <p><b>Colors:</b> Black, white, and grays</p>
+                        <p><b>Typefaces:</b> Metal, Lora, Rubik</p>
+                        <p>I went with an elegant look in part because I wanted to try something new and get away from my comfort zone of sans-serif plus bright colors.</p>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="images/monet/branding.png">
+                            <figcaption>Design's colors and fonts</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div class="bkgd-container">
+            <section>
+                <h2 class="rule">UI Design</h2>
+                <div class="descript"><p>After settling on the overall visual style, I developed the final design by creating a wireframe and then high-fidelity mockups.</p></div>
+
+                <div class="gallery">
+                        <figure>
+                            <figcaption>Wireframe</figcaption>
+                            <img src="images/monet/wireframe.jpeg"></figure>
+                        <figure>
+                            <figcaption>Light Mode Mockup</figcaption>
+                            <img src="images/monet/mockup-light.png"></figure>
+                        <figure>
+                            <figcaption>Dark Mode Mockup</figcaption>
+                            <img src="images/monet/mockup-dark.png"></figure>
+                </div>
+
+                <section class="layout-1col">
+                    <h3>Design Highlights</h3>
+                        <p>Web users tend to scan, not read. The design serves this habit via:</p>
+                        <ul>
+                            <li>Visual hiearchy like headings, and visually showing thematic content grouping.</li>
+                            <li>Clear visual affordances (interactive elements look interactive, etc).</li>
+                            <li>Drawing out and emphasizing user-desired information (such as the number of items in the cart or the total dollar amount).</li>
+                        </ul>
+                </section>
+               
+            </section>
+        </div>
+
+        <div class="bkgd-container">
+            <section>
+                <h2 class="rule">Features Showcase</h2>
+                <div class="descript">
+                    <p>All the required features were sucessfully implemented according to specifications</p>
+                </div>
+            <section class="layout-2col copy-knockdown">
+                <div>
+                    <h3>Light/Dark Mode</h3>
+                    <p>This features allows users to switch between the color schemes</p></div>
+                <div>
+                    <video controls autoplay muted loop>
+                        <source src="images/monet/feature-mode.mp4"></video>
+                </div>
+            </section>
+            <section class="layout-2col copy-knockdown">
+                <div>
+                    <h3>Form Validation</h3>
+                    <p>User input is checked to ensure it is in the right format and that all required information is provided. Note the swapping requirement between phone or email depending on the user's prior selection.</p>
+                </div>
+                <div>
+                    <img src="images/monet/feature-form.gif">
+                </div>
+            </section>
+            <section class="layout-2col copy-knockdown">
+                <div>
+                    <h3>Shopping: Cart, Calculator, and Checkout</h3>
+                    <p>Visual representation of adding or removing products to an online shopping cart with the total changing to match. Checkout is represented with an alert to the user.</p></div>
+                <div>
+                    <video controls autoplay muted loop>
+                        <source src="images/monet/feature-cart.mp4"></video>
+                </div>
+            </section>
+            </section>
+        </div>
+                
+              
+        <div class="bkgd-container">
+            <section>
+                <h2 class="rule">Final Scrollthrough</h2>
+                <div class="descript">
+                    <p><a href="https://n40-c.github.io/monet/">See the completed website hosted on GitHub.</a></p>
+                    <video controls autoplay muted loop class="shrink">
+                        <source src="images/monet/Monet_Demo_s.mp4"></video>
+                </div>
+            </section>
+        </div>
+            
+
+        <div class="bkgd-container white">
+            <section>
+                <h2>Reflection</h2>
+                <div class="halfwidth-layout">
+                    <p>Learning from past mistakes, I made sure to plan out the CSS beforehand, which made the coding process much smoother and prevented major roadblocks and struggles.</p>
+                    <p>If I'd had more time, I would want add more fun effects like scroll or hover effects. I'd also want to add a lightbox feature for the paintings for a better viewing experience.</p>
+                </div>
+            </section>
+        </div>
+
+    </main>
+    <footer>
+        <small>&copy;2023 Naomi Chau</small>
+    </footer>
+</body>
+</html>
