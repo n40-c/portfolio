@@ -311,10 +311,18 @@ figcaption {
     color: white;
 }
 #landing h1 {
-    font-size: 7rem;
+    /*font-size: 7rem;*/ /*for bigger sizes*/
+    font-size: 5rem;
     line-height: 1.1;
+    margin-top: 0;
     margin-bottom: 1rem;
 }
+@media (max-width:36rem){ /*adjust the nav bar to show everything at the smallest size*/
+    #landing header {
+        margin: 0 1em; 
+    }
+}
+
 #landing header p {
     margin: 0;
 }
@@ -340,15 +348,55 @@ figcaption {
     font-size: 1.8rem;
     padding-left: 40px;
 }
+/*landing layout*/
 #landing header > div {
-    width: 70%;
-    margin: 14rem auto 4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: end; 
+    margin: 5em auto 0;
+    padding-left: 1em;
+    width: 19em;
+    display: flex;
+    flex-direction: column-reverse;
+}
+#landing figure {
+    width: 7em;
+    margin: 0;
 }
 #landing [src$=".svg"] {
-    margin-top: 2rem;
+    width: 100%;
+}
+@media (min-width: 40em){
+    #landing header > div {
+        flex-direction: row;
+        width: 27em;
+    }
+    #landing figure {
+        width: 18em;
+        margin-top: 0.5em;
+        margin-left: 0.8em;
+    }
+    
+}
+@media (min-width: 60em) {
+    #landing header h1 {
+        margin-top: 1em;
+    }
+    #landing header > div {
+        min-width: 45em;
+    }
+    #landing figure {
+        width: 15em;
+        margin: 1em;
+    }
+}
+@media (min-width: 82em) {
+    #landing header > div {
+        width: 52em;
+        background-color: ;
+    }
+    #landing figure {
+        width: 12em;
+        margin: 1.4em;
+        margin-left: 1.8em;
+    }
 }
 /*unspecified page styles (about page and contact page)*/
 .unspecified h1 {
@@ -533,7 +581,7 @@ footer {
     position: absolute;
     bottom: 2em;
 }
-/*landing page media query*/
+/*landing page media query for proj gallery*/
 @media (max-width: 60em) {
     .case-study #proj-gallery {
         grid-template-columns: 1fr 1fr;
