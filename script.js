@@ -109,5 +109,5 @@ const copy = async (e) => {
 function changeBtnLabel(buttonE){
     buttonE.textContent = "Copy"; /*default text for button label*/
 }
-document.querySelector("button").addEventListener('click', copy)
+document.querySelector("button[value]").addEventListener('click', copy)
 
