@@ -32,7 +32,7 @@
                 </dl>
                 <dl>
                     <div>
-                        <dt>Fields</dt>
+                        <dt>What I did</dt>
                         <dd>UX, UI, Motion Graphics</dd>
                     </div>
                     <div>
@@ -49,15 +49,11 @@
     <main>
         <div class="bkgd-container gray">
             <section>
-                <h2>Project Goal</h2>
-                <div class="layout-2col">
-                    <div>
-                        <strong class="spotlight">Improve the book discovery process of digital library app Libby&ndash;test for obstacles, then design solutions.</strong>
-                    </div>
-                    <div>
-                        <p>Libby is a portal to the local library’s digital catalog. The redesign will start with research and deliver a redesigned experience as necessary.</p>
-                        <p><b>Book discovery process</b> = the experience of finding a title you’d be interested in borrowing.</p>
-                    </div>
+                <h2>About the project</h2>
+                <div class="layout-halves">
+                    <div><p>This project centers around the library app Lbby. This app is a portal to the digital catalog of partnered libraries, with users able to borrow and puruse library-owned content on the app.</p><p>In this project, I'll be looking at one of the main library features: book borrowing. In particular, the experience of searching for a title to borrow.</p><p>In a physical library, it's the method is pretty standardized, like using the library's signage system or the Dewey decimal classification system. But how about in a virtual system? <strong>Are users able to navigate through the catalog in Libby and successfully find titles they'd like to borrow?</strong></p></div>
+                    
+                    <div><strong class="spotlight">The short of it: the goal of this project is to evaluate &amp; improve the book discovery process of the library app Libby.</strong></div>
                 </div>
             </section>
         </div>
@@ -66,41 +62,29 @@
             <section>
                 <h2>Research + Findings</h2>
                 <div class="descript">
-                    <p>First, I had to learn about the users: their motivations &amp; the general context.
-                    <br>Then, I went problem hunting by conducting usability tests and UX analyses (with heuristics &amp; accessibility guidelines).</p></div>
-        
-                <section class="layout-2col">
-                    <div>
-                        <div class="subtitle">Survey (5 respondents) </div>
-                        <h3>Respondents liked different genres,<br>but used the same data to decide what to read</h3><span class="de-emp">(with this key descriptive data missing from the app).</span>
-                    </div>
-                    <div>
-                        <ul>
-                            <li><b>Book preferences varied:</b> Some liked a range of genres, others liked just one. Some knew what they liked and stuck to it, others were overwhelmed by the choices.</li>
-                            <li><b>Descriptive info lacking:</b> Information that respondents rated important for decision-making were lacking from the app’s title listings (such as user ratings). Users depend on snippets of information provided in title listings to decide what to borrow and peruse.</li>
-                        </ul>
-                    </div>
-                </section>
+                    <p>In order to get a picture of users' expectations and desires, I asked 5 participants questions that ranged from general (such as asking about their motivations for borrowing) to specific (such as asking about what types of information they use to decide whether to borrow a title).</p>
+                    <p>After learning expectations and desires, I evaluated the current design for points of confusion or frustrating elements. I choose to perform a round of usability testing as it would directly show what users have trouble with. I also did a heuristics analysis using established guidelines for web design (I used the <a href="https://www.userfocus.co.uk/resources/guidelines.html">Web Accessibility Guidelines</a>) and science-backed heuristics like <a href="https://lawsofux.com/hicks-law/">Hick’s Law</a>.</p>
+                    <p>This is what I found:</p>
+                </div>
 
                 <section class="layout-2col">
                     <div>
-                        <div class="subtitle">Usability Testing (10 participants)</div>
-                        <h3>Found there are 3 main userflows</h3>
+                        <div class="subtitle">Finding #1</div>
+                        <h3>There are 3 main userflows:</h3>
                         <div class="h3-spotlight">
                             <ul>
                                 <li>Picky Reader <span class="de-emp">(Only these participants struggled)</span></li>
-                                <li>One-Mission</li>
+                                <li>Searchers</li>
                                 <li>Recommendation Seeker</li>
                             </ul>
-                            <span class="de-emp">Also, minor confusion from icons &amp; site structure.</span>
                         </div>
                     </div>
                     <div>
-                        <p>The usability tests found that there are 3 main userflows (in regards to book exploration), with only picky readers experiencing frustrations:</p>
+                        <p>The usability tests revealed that users tend to look for books using one of the 3 methods below (with only the "Picky Reader" userflow running into frustrations):</p>
                         <ul>
                             <li><b>Picky Reader:</b> these participants know what types of books & combinations of genres they like. However, app does not have robust capabilities for detailed searching and filtering, leading to frustration.</li>
-                            <li><b>One-Mission:</b> these participants had a specific book in mind and simply used the search bar.</li>
-                            <li><b>Recommendation Seeker:</b> these depended on recommendations.</li>
+                            <li><b>Searchers:</b> these participants had a specific book in mind and simply used the search bar.</li>
+                            <li><b>Recommendation Seeker:</b> these participants depended on recommendations such as library-curated guides.</li>
                         </ul>
                         <p>Testing also showed there were points of confusion:</p>
                         <ul><li><b>Icon and structure confusion</b> caused by Libby-unique icons that don’t have a descriptive text label, and site structure that isn’t clear at a glance. Both of these issues were observed in the usability testing as well.</li></ul>
@@ -109,15 +93,26 @@
 
                 <section class="layout-2col">
                     <div>
-                        <div class="subtitle">Accessibility Analysis, Heuristics Analysis</div>
-                        <h3>Users slowed by information overload</h3>
-                        <span class="de-emp">and resurfacing of icons & site structure confusion.</span>
+                        <div class="subtitle">Finding #2</div>
+                        <h3>Users slowed by information overload &amp; icon, site structure confusion</h3>
                     </div>
                     <div>
-                        <p>Heuristics like Web Accessibility Guidelines and Hick’s Law were used to evaluate the current design, with standout issues being:</p>
                         <ul>
                             <li><b>Users are slowed down</b> by information overload, partially caused by redundant listings.</li>
-                            <li><b>Icon and structure confusion</b> validated by, and same as found in usability testing. </li>
+                            <li><b>Icon and site structure confusion</b> caused by Libby-unique icons that don’t have a descriptive text label, and site structure that isn’t clear at a glance. Both of these issues surfaced in the heuristics analysis and were validated by the usability tests.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="layout-2col">
+                    <div>
+                        <div class="subtitle">Finding #3</div>
+                        <h3>Although respondents varied greatly in genre preferences, desired descriptive info was similar (though lacking from the app).</h3></span>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><b>Book preferences varied:</b> Some liked a range of genres, others liked just one. Some knew what they liked and stuck to it, while others were overwhelmed by the choices.</li>
+                            <li><b>Descriptive info lacking:</b> Respondents tended to find similar types of information helpful when deciding whether to borrow a title or not. For instance, all respondents considered genre & user reviews helpful. Critically, these types of info were lacking on the app which had sparse genre-tagging (most titles had only 1-3 tags) and no user review system.</li>
                         </ul>
                     </div>
                 </section>
@@ -128,24 +123,28 @@
             <section>
                 <h2>Design Goals</h2>
                 <div class="descript"><p>With the problems pinpointed, it was time to formulate goals for the redesign.</p></div>
-            </section>
+            
                 
-            <section class="layout-2col">
+            <section class="layout-halves">
                 <div class="spotlight">
-                    <p>How might we help Picky Readers find titles that fit their specific tastes...
-                    <span class="de-emp">while continuing to serve the other two userflows and addressing the discovered user needs and quality of life issues.</span></p>
+                    <p>How can we help all 3 user flows find titles they'd want to borrow?</p>
                 </div>
                 <div>
-                    <p>This was both an obstacle (for Picky Readers) and an opportunity (for the other two user flows).</p>
-                    <p><b>User needs and quality of life issues include:</b> providing user desired decision-making information, resolving icon and structure confusion, and decreasing information overload.</p>
+                    <p>In particular, the final design should fulfill the following:</p>
+                    <ul>
+                        <li>implement features targeted towards all 3 user flows</li>
+                        <li>address confusion by clarifying site structure, icons, and redundant listings</li>
+                        <li>include descriptive info desired by users</li>
+                    </ul>
                 </div>
+            </section>
             </section>
         </div>
 
         <div class="bkgd-container">
             <section>
-                <h2>Ideation + Process</h2>
-                <div class="descript"><p>With a goal in mind, it was time to find solutions. I brainstormed features and iterated on the UI to solve UX issues, and made static and animated mock-ups.</p></div>
+                <h2>Ideation + Design Process</h2>
+                <div class="descript"><p>With clear goal in mind, I set off to find possible solutions. I brainstormed features & did research, iterated on the UI design, and made an animated mockup.</p></div>
             </section>
 
             <section class="layout-2col">
@@ -196,11 +195,6 @@
                     </div>
                     <div>
                         <img src="images/libby/mockups-iteration-example.png">
-                        <!--
-                        <img src="images/libby/mockups-iteration1.png" alt="iteration 1">
-                        <img src="images/libby/mockups-iteration2.png" alt="iteration 2">
-                        <img src="images/libby/mockups-iteration3.png" alt="final iteration grayscale">
-                        <img src="images/libby/mockups-iteration3color.png" alt="final iteration in color">-->
                     </div>
                 </div>
             </section>
@@ -208,15 +202,16 @@
 
         <div class="bkgd-container">
             <section>
-                <h2 class="rule">Design Solutions</h2>
-                <div class="descript"><p>The redesign focuses on addressing the one user flow with frustrations (Picky Readers), maintaining key features for the other two types of uses. The redesign also has other changes based on accessibility and heuristics analysis.</p></div>
+                <h2 class="rule">Solutions</h2>
+                <div class="descript"><p>Here's a walkthrough of the final design and callouts to the key features that address the usability issues discovered previously.</p></div>
 
                 <section class="layout-2col spacing-onethird copy-knockdown">
                     <div>
+                        <div class="subtitle">Feature #1</div>
                         <h3>Personalized suggestions</h3>
-                        <p>Suggests titles based on user history (left). Users can also fine tune suggestions (right).</p>
-                        <p>Provides a point of entry and reduces feeling of overwhelmingness. Comfortable and familiar to users as the feature is common on social media apps.</p>
-                        <p>Great for both picky readers and recommendation seekers.</p>
+                        <p>This feature suggests titles based on user history. Users can also fine tune suggestions.</p>
+                        <p>This helps Picky Readers by learning their specific preferences and suggesting titles they might be interested in. These recommendations also address the wants of Recommendation Seekers.</p>
+                        <p>In addition, this feature provides a point of entry and reduces the feeling of overwhelmingness. It should also be comfortable and familiar to users as the feature is common on social media apps.</p>
                     </div>
                     <div>
                         <img src="images/libby/mockups-suggestions.gif" alt="homepage suggestions animated mockup">
@@ -226,8 +221,9 @@
 
                 <section class="layout-2col spacing-onethird copy-knockdown">
                     <div>
+                        <div class="subtitle">Feature #2</div>
                         <h3>Public user curated collections</h3>
-                        <p>Allows users to group titles that fit their specific preferences (for instance, a category more specific than a genre) and share these with other users.</p>
+                        <p>This feature allows users to group titles that fit their specific preferences (for instance, a category more specific than a genre like "Gothic Horror") and share these with other users.</p>
                         <p>This serves both Recommendation Seekers as well as Picky Readers (as they can share and find titles that fit their taste but not conventional genres).</p>
                     </div>
                     <div>
@@ -237,8 +233,9 @@
 
                 <section class="layout-2col spacing-onethird copy-knockdown">
                     <div>
+                        <div class="subtitle">Feature #3</div>
                         <h3>Fine-grain filters</h3>
-                        <p>Allows users to apply a detailed combination of filters. A search feature helps users find the fThe ABCs of Behavior Analysisilters they want. Perfect for Picky Readers.</p>
+                        <p>These filters allows users to apply a detailed combination of filters. A search feature helps users find the filters they want. Perfect for Picky Readers.</p>
                     </div>
                     <div>
                         <img src="images/libby/mockups-filters-p1.png" alt="filters top mockup">
@@ -249,15 +246,15 @@
                 <section class="layout-1col">
                     <h3>Addressing the other userflows with Quick search, Librarian-curated lists</h3>
                     <ul>
-                        <li>To help One-Mission users who go straight for the search bar, the redesign adds quick search to the main page.</li>
-                        <li>To help Recommendation Seekers, the redesign keeps librarian-curated lists prominent.</li>
+                        <li>For Searchers, the redesign adds quick search to the main page.</li>
+                        <li>For Recommendation Seekers, the redesign keeps librarian-curated lists prominent.</li>
                     </ul>
                 </section>
 
                 <section class="layout-1col">
                     <h3>Other key changes:</h3>
                     <ul>
-                        <li><b>Efficient searching:</b> Show key data such as genres in list view. This is key decision-making data (as found in user survey).</li>
+                        <li><b>Efficient searching:</b> Show key data such as genres in list view. This is key decision-making data.</li>
                         <li><b>Clarified structure:</b> Updated layout clearly communicates structure, that multiple lists are included.</li>
                         <li><b>Clarified icons using descriptive text:</b> Replaced platform-specific icons with descriptive text.</li>
                         <li><b>Choice overload:</b>
@@ -315,7 +312,7 @@
                 <h2>Reflection</h2>
                 <div class="halfwidth-layout">
                     <p>This project highlighted to me the importance of testing with real users. The obstacles and opportunities I discovered during research and analysis were very different from what I had personally expected. Testing ensured that I was addressing real issues.</p>
-                    <p>If I had more time, I would like to create a prototype and conduct another round of usability testing. I would also have liked to design with a higher level of integrated animations in mind, as I only had transition animations in mind while designing.</p>
+                    <p>If I had more time, I would like to create a prototype and conduct another round of usability testing. I also would also have liked to explore more facets of the app such as the dashboard, managing holds/borrows, and so on.</p>
                 </div>
             </section>
         </div>
