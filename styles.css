@@ -212,13 +212,20 @@ body.case-study > .bkgd-container:first-of-type {
     justify-items: center;
 }
 /**/
-.layout-2col {
+.layout-2col, .layout-halves {
     display: grid;
     grid-template-columns: fit-content(40%) 60%;
     column-gap: 6rem;
 }
 .layout-2col ~ .layout-2col, .layout-2col ~ .layout-1col, .layout-1col ~ .layout-2col, .layout-1col ~ .layout-1col, .gallery ~ .layout-1col, .gallery ~ .layout-2col {
     margin-top: 12rem;
+}
+.layout-halves {
+    grid-template-columns: 1fr 1fr;
+}
+.layout-halves > div:nth-child(2):last-child { /*selects the 2nd if there's only 2 elements*/
+    align-self: end;
+    margin-bottom: 0.9em;
 }
 .half-half-display {
     display: grid;
@@ -230,7 +237,7 @@ body.case-study > .bkgd-container:first-of-type {
 .descript {
     margin-bottom: 12rem;
 }
-.pink .descript {
+.pink .descript, .gray .descript {
     margin-bottom: 6rem;
 }
 .pink b {
@@ -365,15 +372,15 @@ figcaption {
 }
 @media (min-width: 40em){
     #landing header > div {
+        margin: 7em auto 2em;
         flex-direction: row;
-        width: 27em;
+        width: 29em;
     }
     #landing figure {
         width: 18em;
         margin-top: 0.5em;
         margin-left: 0.8em;
     }
-    
 }
 @media (min-width: 60em) {
     #landing header h1 {
@@ -381,21 +388,27 @@ figcaption {
     }
     #landing header > div {
         min-width: 45em;
+        margin: 8em auto 3em;
     }
     #landing figure {
         width: 15em;
         margin: 1em;
+        margin-top: 2em;
     }
 }
-@media (min-width: 82em) {
+@media (min-width: 88em) {
     #landing header > div {
-        width: 52em;
-        background-color: ;
+        width: 62em;
+        margin: 10em auto 4em;
+    }
+    #landing header > div p {
+        font-size: 1.2em;
     }
     #landing figure {
-        width: 12em;
-        margin: 1.4em;
-        margin-left: 1.8em;
+        width: 16em;
+        margin: 0;
+        margin-left: 2em;
+        margin-top: 1em;
     }
 }
 /*unspecified page styles (about page and contact page)*/
@@ -646,7 +659,7 @@ footer {
     } 
 }
 @media (max-width: 64em) {
-    .layout-2col, .half-half-display {
+    .layout-2col, .half-half-display, .layout-halves {
         grid-template-columns: 1fr;
     }
     .layout-2col img {
