@@ -249,7 +249,7 @@ p:first-child {
 .bkgd-container {
     padding: 8rem 0;
 }
-.bkgd-container.pink, .bkgd-container.gray {
+.bkgd-container.pink {
     padding: 4rem 0;
 }
 body > .bkgd-container:first-of-type {
