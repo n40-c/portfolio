@@ -4,7 +4,7 @@ const lightbox = document.createElement('div')
 lightbox.id = 'lightbox'
 document.body.appendChild(lightbox);
 
-const boxImgs = document.querySelectorAll('main img')
+const boxImgs = document.querySelectorAll('.project img')
 boxImgs.forEach(img => {
     img.addEventListener('click', e => {
         lightbox.classList.add('active')
@@ -29,66 +29,76 @@ lightbox.addEventListener('click', e => {
     lightbox.classList.remove('long')
 })
 
-/*buttons to see full image*/
-const seeFullBtns = document.querySelectorAll('.see-full')
-seeFullBtns.forEach(btn => {
-    btn.addEventListener('click', e => {
-        lightbox.classList.add('active')
-        const showcase = document.createElement('img')
-        showcase.src = e.target.nextElementSibling.src
-        while (lightbox.firstChild) {
-            lightbox.removeChild(lightbox.firstChild)
-        }
-    
-        if (showcase.height > window.innerHeight*1.5) {
-            lightbox.classList.add('long')
-        }
-        lightbox.appendChild(showcase)
-    })
-})
-
 /*insert the code for the project gallery at the end of each case study page*/
 /*The code in projGallery is the html needed for the project gallery. It should be the last child inside main (for case study pagse)*/
-const projGallery = `<div class="bkgd-container">
-<section id="proj-gallery">
-    <h2>More projects</h2>
-
-    <section>
-        <a href="libby.html">
-            <div><img src="images/libby/libby-cover.png"></div>
-            <h3>Libby UX</h3>
-            <p>Improving the book exploration process</p>
+const projGallery = `<section class="container px-4" id="works">
+<h2 class="mt-5">See More Projects</h2>
+<div class="row gx-4">
+    <div class="col-12 col-md-6 col-lg-4">
+        <a href="#">
+            <div class="card">
+                <div class="card-body px-0">
+                    <h3 class="card-title">Bellevue Botanical Garden</h3>
+                    <p class="card-text">Refreshing the Bellevue Botanical Garden website to strengthen promotions and appeal to local tourists</p>  
+                </div>
+                <div class="bg-image"><img src="../../images/botanical-cover.png" class="card-img-bottom" alt="..."></div>
+            </div>
         </a>
-    </section>
-
-    <section>
-        <a href="dutchbros.html">
-            <div><img src="images/dutchbros/dutchbros-cover.png"></div>
-            <h3>Dutch Bros UX</h3>
-            <p>Evaluating the Dutch Bros. website</p>
+    </div>
+    
+    <div class="col-12 col-md-6 col-lg-4">
+        <a href="#">
+            <div class="card">
+                <div class="card-body px-0">
+                    <h3 class="card-title">Libby</h3>
+                    <p class="card-text">Innovating the book exploration experience for digital library users</p>  
+                </div>
+                <div class="bg-image"><img src="../../images/libby-cover.png" class="card-img-bottom" alt="..."></div>
+            </div>
         </a>
-    </section>
+    </div>
 
-    <section>
-        <a href="step.html">
-            <div><img src="images/step/step-banner.png"></div>
-            <h3>Step Responsive Design</h3>
-            <p>E-commerce site design</p>
+    <div class="col-12 col-md-6 col-lg-4">
+        <a href="#">
+            <div class="card">
+                <div class="card-body px-0">
+                    <h3 class="card-title">Dutch Bros.</h3>
+                    <p class="card-text">Finetuning key goals for Dutch Bros & their users</p>  
+                </div>
+                <div class="bg-image"><img src="../../images/dutchbros-cover.png" class="card-img-bottom" alt="..."></div>
+            </div>
         </a>
-    </section>
+    </div>
 
-    <section>
-        <a href="monet.html">
-            <div><img src="images/monet/monet-cover.png"></div>
-            <h3>Monet: Creating a 1-Page Site</h3>
-            <p>UI design and front-end implementation</p>
+    <div class="col-12 col-md-6 col-lg-4">
+        <a href="#">
+            <div class="card">
+                <div class="card-body px-0">
+                    <h3 class="card-title">Step</h3>
+                    <p class="card-text">Enhancing the e-commerce experience for online shoppers</p>  
+                </div>
+                <div class="bg-image"><img src="../../images/step-cover.png" class="card-img-bottom" alt="..."></div>
+            </div>
         </a>
-    </section>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+        <a href="#">
+            <div class="card">
+                <div class="card-body px-0">
+                    <h3 class="card-title">Monet</h3>
+                    <p class="card-text">Creating a one-page, one-stop shop marketing page</p>  
+                </div>
+                <div class="bg-image"><img src="../../images/monet-cover.png" class="card-img-bottom" alt="..."></div>
+            </div>
+        </a>
+    </div>
+</div>
 </section>
-</div>`
-let caseStudy = document.querySelector(".case-study main")
+`
+let caseStudy = document.querySelector(".project main")
 if(caseStudy) {
-    caseStudy.insertAdjacentHTML('beforeend', projGallery)
+    caseStudy.insertAdjacentHTML('afterend', projGallery)
 }
 
 
@@ -107,7 +117,13 @@ const copy = async (e) => {
     }
 }
 function changeBtnLabel(buttonE){
-    buttonE.textContent = "Copy"; /*default text for button label*/
+    buttonE.innerHTML = `Copy <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/>
+  </svg>`; /*default text for button label*/
+    
 }
-document.querySelector("button[value]").addEventListener('click', copy)
+let copyBtn = document.querySelector("button[value]")
+if(copyBtn) {
+    copyBtn.addEventListener('click', copy)
+}
 
