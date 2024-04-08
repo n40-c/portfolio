@@ -1,104 +1,61 @@
-/*adapted lightbox from web dev simplified*/
 
-const lightbox = document.createElement('div')
-lightbox.id = 'lightbox'
-document.body.appendChild(lightbox);
-
-const boxImgs = document.querySelectorAll('.project img')
-boxImgs.forEach(img => {
-    img.addEventListener('click', e => {
-        lightbox.classList.add('active')
-        const showcase = document.createElement('img')
-        showcase.src = img.src
-        while (lightbox.firstChild) {
-            lightbox.removeChild(lightbox.firstChild)
-        }
-    
-        if (showcase.height > window.innerHeight*1.2) {
-            lightbox.classList.add('long')
-        }
-        lightbox.appendChild(showcase)
-        
-    })
-})
-
-lightbox.addEventListener('click', e => {
-    if (e.target !== e.currentTarget) return
-
-    lightbox.classList.remove('active')
-    lightbox.classList.remove('long')
-})
-
-/*insert the code for the project gallery at the end of each case study page*/
-/*The code in projGallery is the html needed for the project gallery. It should be the last child inside main (for case study pagse)*/
-const projGallery = `<section class="container px-4" id="works">
-<h2 class="mt-5">See More Projects</h2>
-<div class="row gx-4">
-    <div class="col-12 col-md-6 col-lg-4">
-        <a href="#">
-            <div class="card">
-                <div class="card-body px-0">
-                    <h3 class="card-title">Bellevue Botanical Garden</h3>
-                    <p class="card-text">Refreshing the Bellevue Botanical Garden website to strengthen promotions and appeal to local tourists</p>  
-                </div>
-                <div class="bg-image"><img src="../../images/botanical-cover.png" class="card-img-bottom" alt="..."></div>
-            </div>
-        </a>
-    </div>
-    
-    <div class="col-12 col-md-6 col-lg-4">
-        <a href="#">
-            <div class="card">
-                <div class="card-body px-0">
-                    <h3 class="card-title">Libby</h3>
-                    <p class="card-text">Innovating the book exploration experience for digital library users</p>  
-                </div>
-                <div class="bg-image"><img src="../../images/libby-cover.png" class="card-img-bottom" alt="..."></div>
-            </div>
-        </a>
-    </div>
-
-    <div class="col-12 col-md-6 col-lg-4">
-        <a href="#">
-            <div class="card">
-                <div class="card-body px-0">
-                    <h3 class="card-title">Dutch Bros.</h3>
-                    <p class="card-text">Finetuning key goals for Dutch Bros & their users</p>  
-                </div>
-                <div class="bg-image"><img src="../../images/dutchbros-cover.png" class="card-img-bottom" alt="..."></div>
-            </div>
-        </a>
-    </div>
-
-    <div class="col-12 col-md-6 col-lg-4">
-        <a href="#">
-            <div class="card">
-                <div class="card-body px-0">
-                    <h3 class="card-title">Step</h3>
-                    <p class="card-text">Enhancing the e-commerce experience for online shoppers</p>  
-                </div>
-                <div class="bg-image"><img src="../../images/step-cover.png" class="card-img-bottom" alt="..."></div>
-            </div>
-        </a>
-    </div>
-
-    <div class="col-12 col-md-6 col-lg-4">
-        <a href="#">
-            <div class="card">
-                <div class="card-body px-0">
-                    <h3 class="card-title">Monet</h3>
-                    <p class="card-text">Creating a one-page, one-stop shop marketing page</p>  
-                </div>
-                <div class="bg-image"><img src="../../images/monet-cover.png" class="card-img-bottom" alt="..."></div>
-            </div>
-        </a>
-    </div>
-</div>
-</section>
+/*propagate footer across project pages*/
+const footer = `
+<footer class="container px-4" id="contact">
+        <div class="row">
+        <div class="col-md-4 mb-4">
+            <h2 class="mb-3">Connect</h2>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="mailto:nchau@protonmail.com" class="p-0 text-body-secondary">nchau@protonmail.com</a></li>
+                <li class="nav-item mb-2"><a href="#" class="text-body-secondary p-0">LinkedIn</a></li>
+                <li class="nav-item mb-2"><a href="#" class="text-body-secondary p-0">Behance</a></li>
+            </ul>
+        </div>
+        <div class="col-4 mb-3">
+            <h2 class="mb-3">Resume</h2>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="../../resume.html" class="nav-link p-0 text-body-secondary stylized">View Resume <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                </svg></a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="row"><small>&copy; 2024 Naomi Chau</small></div>
+    </footer>
 `
-let caseStudy = document.querySelector(".project main")
-if(caseStudy) {
-    caseStudy.insertAdjacentHTML('afterend', projGallery)
+const footerToplevel = `
+<footer class="container px-4" id="contact">
+        <div class="row">
+        <div class="col-md-4 mb-4">
+            <h2 class="mb-3">Connect</h2>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="mailto:nchau@protonmail.com" class="p-0 text-body-secondary">nchau@protonmail.com</a></li>
+                <li class="nav-item mb-2"><a href="#" class="text-body-secondary p-0">LinkedIn</a></li>
+                <li class="nav-item mb-2"><a href="#" class="text-body-secondary p-0">Behance</a></li>
+            </ul>
+        </div>
+        <div class="col-4 mb-3">
+            <h2 class="mb-3">Resume</h2>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="resume.html" class="nav-link p-0 text-body-secondary stylized">View Resume <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                </svg></a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="row"><small>&copy; 2024 Naomi Chau</small></div>
+    </footer>
+`
+
+let worksProject = document.querySelector(".project #works") /*project pages*/
+let worksIndex = document.querySelector("#works") /* index */
+let other = document.querySelector("main") /*about and resume */
+if(worksProject) {
+    works.insertAdjacentHTML('afterend', footer)
+}else if(worksIndex){
+    worksIndex.insertAdjacentHTML('afterend', footerToplevel)
+}else if(other){
+    other.insertAdjacentHTML('afterend', footerToplevel)
 }
 
 
