@@ -11,7 +11,7 @@ const footer = `
                 <li class="nav-item mb-2"><a href="#" class="text-body-secondary p-0">Behance</a></li>
             </ul>
         </div>
-        <div class="col-4 mb-3">
+        <div class="col-md-4 mb-3">
             <h2 class="mb-3">Resume</h2>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="../../resume.html" class="nav-link p-0 text-body-secondary stylized">View Resume <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -34,7 +34,7 @@ const footerToplevel = `
                 <li class="nav-item mb-2"><a href="#" class="text-body-secondary p-0">Behance</a></li>
             </ul>
         </div>
-        <div class="col-4 mb-3">
+        <div class="col-md-4 mb-3">
             <h2 class="mb-3">Resume</h2>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="resume.html" class="nav-link p-0 text-body-secondary stylized">View Resume <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
