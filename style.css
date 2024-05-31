@@ -111,11 +111,9 @@ a.stylized {
 }
 .navbar-toggler {
     border-width: 0;
-    margin: 1px;
 }
 .navbar-toggler:focus {
     box-shadow: none;
-    border-width: 1px;
     margin: 0;
 }
 .hero {
