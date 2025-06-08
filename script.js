@@ -23,29 +23,6 @@ let topofthepage = document.querySelector("script");
 topofthepage.insertAdjacentHTML('afterend', navbar);*/
 
 
-// COPY EMAIL FUNCTION
-// copy function to copy email to clipboard.
-const copy = async (e) => {
-    let toCopy = e.target.value;
-    try {
-        await navigator.clipboard.writeText(toCopy);
-        console.log('Content copied to clipboard');
-
-        e.target.textContent = "Copied!" /*change label iimmediately*/
-        setTimeout(changeBtnLabel, 1000, e.target)
-    } catch (err) {
-        console.error('Failed to copy: ', err);
-    }
-}
-function changeBtnLabel(buttonE){
-    buttonE.innerHTML = `Copy`; /*default text for button label*/ 
-}
-let copyBtn = document.querySelector("button[value]")
-if(copyBtn) {
-    copyBtn.addEventListener('click', copy)
-}
-
-
 // PROPAGATE PROJECTS CARDS
 // puts cards at the end of each project, not including the current project's card
 const pageTitle = document.title.toLowerCase();
@@ -162,5 +139,28 @@ if (!path.includes("index")) {
     let footerE = document.querySelector("footer");
     footerE.insertAdjacentHTML('beforeend', footer);
 }
-
 //NOTE ON PROPAGATION: all pages have the html for nav & index.html has html for both the project cards and the footer. Whereas, the footer & the project cards for the other pages are propagated with JS.
+
+
+
+// COPY EMAIL FUNCTION
+// copy function to copy email to clipboard.
+const copy = async (e) => {
+  let toCopy = e.target.value;
+  try {
+      await navigator.clipboard.writeText(toCopy);
+      console.log('Content copied to clipboard');
+
+      e.target.textContent = "Copied!" /*change label iimmediately*/
+      setTimeout(changeBtnLabel, 1000, e.target)
+  } catch (err) {
+      console.error('Failed to copy: ', err);
+  }
+}
+function changeBtnLabel(buttonE){
+  buttonE.innerHTML = `Copy`; /*default text for button label*/ 
+}
+let copyBtn = document.querySelector("button[value]")
+if(copyBtn) {
+  copyBtn.addEventListener('click', copy)
+}
