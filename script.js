@@ -138,7 +138,7 @@ const footer = `
             <a href="mailto:nchau@protonmail.com" class="text-secondary link-underline link-underline-opacity-0">nchau@protonmail.com</a><button value="nchau@protonmail.com" class="btn btn-outline-primary text-primary ms-2 py-0">Copy</button></li>
 
                 <li class="nav-item mb-2"><i class="bi bi-card-text text-primary"></i>
-            <a href="" class="text-secondary link-underline link-underline-opacity-0">Resume</a></li>
+            <a href="images/2025April-Resume.pdf" target="_blank" class="text-secondary link-underline link-underline-opacity-0">Resume</a></li>
 
             </ul>
         </div>
