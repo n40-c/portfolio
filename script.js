@@ -37,7 +37,8 @@ const projects = [
     keyword: "libby",
     html: `<div class="col-12 col-lg-6 d-flex mb-4">
       <a href="libby.html" class="card custom-card h-100 w-100 text-decoration-none text-reset">
-        <h3 class="card-title">Overlooked to empowered: Elevating&nbsp;&&nbsp;targeting book discovery at e-borrower behavior
+        <h3 class="card-title">
+         Overlooked to empowered: Elevating book discovery, targeted at e&#8209;borrower behavior
         </h3>
         <div class="card-subtitle mb-3 text-muted">
           App design・User Research
@@ -56,7 +57,7 @@ const projects = [
         <h3 class="card-title">Removing navigation barriers to help Dutch Bros customers find what matters
         </h3>
         <div class="card-subtitle mb-3 text-muted">
-          Responsive design・User Research・Collaborative
+          Team・Responsive design・User Research
         </div>
         <div class="card-image-container">
           <img src="images/dutchbros/dutchbros-cover.png" alt="Card image">
@@ -64,20 +65,23 @@ const projects = [
         </div>
       </a>
     </div>`
-  }/*,
+  },
   {
-    keyword: "botanical",
+    keyword: "ai",
     html: `<div class="col-12 col-lg-6 d-flex mb-4">
-      <a href="projects/botanical/botanical.html" class="card custom-card h-100 w-100 text-decoration-none text-reset">
-        <h3 class="card-title">Refreshing the Bellevue Botanical Garden website to</h3>
-        <div class="card-subtitle mb-3 text-muted">Subtitle</div>
-        <div class="card-image-container">
-          <img src="images/botanical/botanical-cover.png" alt="Card image">
-          <span class="visit-button">Visit</span>
-        </div>
-      </a>
-    </div>`
-  }*/
+    <a href="ai.html" class="card custom-card h-100 w-100 text-decoration-none text-reset">
+      <h3 class="card-title">Cutting through clutter for 40% increase in task success on AI&#8209;powered media platform
+      </h3>
+      <div class="card-subtitle mb-3 text-muted">
+        Work Experience・Team・AI Tools
+      </div>
+      <div class="card-image-container">
+        <img src="images/ai/ai-cover.png" alt="Card image">
+        <span class="visit-button">Visit</span>
+      </div>
+    </a>
+  </div>`
+  }
 ];
 
 // Locate the tag to insert into
