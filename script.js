@@ -29,7 +29,7 @@ const pageTitle = document.title.toLowerCase();
 const path = window.location.pathname.toLowerCase();
 
 // Keywords that identify pages where cards should NOT appear
-const excludePages = ["about", "index"];
+const excludePages = ["about", "index", "/ "];
 
 // Project definitions (with keyword to match current page)
 const projects = [
@@ -41,7 +41,7 @@ const projects = [
          Overlooked to empowered: Elevating book discovery, targeted at e&#8209;borrower behavior
         </h3>
         <div class="card-subtitle mb-3 text-muted">
-          App design・User Research
+        App design・User research・UI showcase
         </div>
         <div class="card-image-container">
           <img src="images/libby/libby-cover.png" alt="Card image">
@@ -57,7 +57,7 @@ const projects = [
         <h3 class="card-title">Removing navigation barriers to help Dutch Bros customers find what matters
         </h3>
         <div class="card-subtitle mb-3 text-muted">
-          Team・Responsive design・User Research
+        Team・User research・Responsive
         </div>
         <div class="card-image-container">
           <img src="images/dutchbros/dutchbros-cover.png" alt="Card image">
@@ -73,7 +73,7 @@ const projects = [
       <h3 class="card-title">Cutting through clutter for 40% increase in task success on AI&#8209;powered media platform
       </h3>
       <div class="card-subtitle mb-3 text-muted">
-        Work Experience・Team・AI Tools
+      NDA・AI tools・Cross-functional team
       </div>
       <div class="card-image-container">
         <img src="images/ai/ai-cover.png" alt="Card image">
