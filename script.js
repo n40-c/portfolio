@@ -139,7 +139,7 @@ const footer = `
     </div>
 `
 // where to put it
-if (!path.includes("index")) {
+if (path !== "/" && !path.includes("index")) {
     let footerE = document.querySelector("footer");
     footerE.insertAdjacentHTML('beforeend', footer);
 }
