@@ -28,6 +28,11 @@ topofthepage.insertAdjacentHTML('afterend', navbar);*/
 const pageTitle = document.title.toLowerCase();
 const path = window.location.pathname.toLowerCase();
 
+// Normalize path to exclude both "/" and "/index.html"
+if (path === "/" || path.endsWith("/index.html")) {
+  path = "/index";
+}
+
 // Keywords that identify pages where cards should NOT appear
 const excludePages = ["about", "index", "/ "];
 
