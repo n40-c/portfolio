@@ -26,7 +26,7 @@ topofthepage.insertAdjacentHTML('afterend', navbar);*/
 // PROPAGATE PROJECTS CARDS
 // puts cards at the end of each project, not including the current project's card
 const pageTitle = document.title.toLowerCase();
-const path = window.location.pathname.toLowerCase();
+let path = window.location.pathname.toLowerCase();
 
 // Normalize path to exclude both "/" and "/index.html"
 if (path === "/" || path.endsWith("/index.html")) {
@@ -121,7 +121,7 @@ const footer = `
             <ul class="nav flex-column">
 
                 <li class="nav-item mb-2"><i class="bi bi-envelope text-primary"></i>
-            <a href="mailto:nchau@protonmail.com" class="text-secondary link-underline link-underline-opacity-0">nchau@protonmail.com</a><button value="nchau@protonmail.com" class="btn btn-outline-primary text-primary ms-2 py-0">Copy</button></li>
+            <a href="mailto:naomi.chau.design@gmail.com" class="text-secondary link-underline link-underline-opacity-0">naomi.chau.design@gmail.com</a><button value="naomi.chau.design@gmail.com" class="btn btn-outline-primary text-primary ms-2 py-0">Copy</button></li>
 
                 <li class="nav-item mb-2"><i class="bi bi-card-text text-primary"></i>
             <a href="images/2025April-Resume.pdf" target="_blank" class="text-secondary link-underline link-underline-opacity-0">Resume</a></li>
@@ -169,7 +169,10 @@ const copy = async (e) => {
 function changeBtnLabel(buttonE){
   buttonE.innerHTML = `Copy`; /*default text for button label*/ 
 }
-let copyBtn = document.querySelector("button[value]")
+let copyBtn = document.querySelectorAll("button[value]")
 if(copyBtn) {
-  copyBtn.addEventListener('click', copy)
+  copyBtn.forEach((e)=>
+  e.addEventListener('click', copy)
+  )
+  
 }
